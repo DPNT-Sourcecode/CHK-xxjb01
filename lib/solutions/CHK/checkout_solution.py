@@ -45,10 +45,11 @@ def checkout(skus:str) -> int:
 
         for key, value in count.items():
             if key == 'A':
-                if count['A'] % 5 != 0 and count['A'] > :
+                div_num = 5
+                if count['A'] % 5 != 0 and count['A'] < 5:
                     div_num = 3
                     count['3A'] = int(value / div_num)
-                else:
+                elif count['A'] > 5:
                     div_num = 5
                     count['5A'] = int(value / div_num)
 

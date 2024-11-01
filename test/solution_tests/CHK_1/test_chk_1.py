@@ -33,11 +33,12 @@ class TestCheckout():
     def test_new_discount_multiple(self):
         assert checkout_solution.checkout('AAAAAAAA') == 360
 
-    def test_1(self):
+    def test_7_as(self):
         assert checkout_solution.checkout('AAAAAAA') == 300
 
-    def test_2(self):
+    def test_8_as(self):
         assert checkout_solution.checkout('AAAAAAAA') == 330
 
-    def test_3(self):
+    def test_6_as(self):
         assert checkout_solution.checkout('AAAAAA') == 250
+
