@@ -47,6 +47,8 @@ def checkout(skus:str) -> int:
             if key == 'A':
                 count['5A'] = int(value / 5)
                 count['A'] = value % 5
+                count['A'] = count['A'] % 3
+
                 # count['5A'] = int(value / 3)
                 # count['A'] = value % 3
 
@@ -78,4 +80,5 @@ def checkout(skus:str) -> int:
     return result
 
 checkout('EE')
+
 
