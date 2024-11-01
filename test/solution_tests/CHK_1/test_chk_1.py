@@ -40,8 +40,8 @@ class TestCheckout():
     def test_new_discount_7A(self):
         assert checkout_solution.checkout('AAAAAAA') == 300
 
-    # def test_new_discount_multiple_8A(self):
-    #     assert checkout_solution.checkout('AAAAAAAA') == 330
+    def test_new_discount_multiple_8A(self):
+        assert checkout_solution.checkout('AAAAAAAA') == 330
 
     # def test_7_as(self):
     #     assert checkout_solution.checkout('AAAAAAA') == 300
@@ -60,6 +60,3 @@ class TestCheckout():
     # def test_8_es(self):
     #     assert checkout_solution.checkout('EEEEEEEEBB') == 320
     #     # {'3A': 0, '5A': 0, '2B': 0, 'B': 0, 'E': 8}
-
-
-
