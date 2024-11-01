@@ -11,10 +11,20 @@
 | C    | 20    |                |
 | D    | 15    |                |
 +------+-------+----------------+
+
++------+-------+------------------------+
+| Item | Price | Special offers         |
++------+-------+------------------------+
+| A    | 50    | 3A for 130, 5A for 200 |
+| B    | 30    | 2B for 45              |
+| C    | 20    |                        |
+| D    | 15    |                        |
+| E    | 40    | 2E get one B free      |
++------+-------+------------------------+
 """
 from tabnanny import check
 
-price_table = {'3A': 130,'2B': 45, 'A': 50, 'B': 30, 'C': 20, 'D': 15 }
+price_table = {'3A': 130, '5A': 200 ,'2B': 45, 'A': 50, 'B': 30, 'C': 20, 'D': 15, 'E': 40 }
 
 def checkout(skus:str) -> int:
 
@@ -33,7 +43,7 @@ def checkout(skus:str) -> int:
     if result != -1:
 
         for key, value in count.items():
-            if key == 'A':
+            if key == 'A' and value % 3 == 0:
                 count['3A'] = int(value / 3)
                 count['A'] = value % 3
             elif key == 'B':
