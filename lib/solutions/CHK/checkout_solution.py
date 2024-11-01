@@ -78,8 +78,3 @@ def checkout(skus:str) -> int:
     print(count)
 
     return result
-
-
-
-
-

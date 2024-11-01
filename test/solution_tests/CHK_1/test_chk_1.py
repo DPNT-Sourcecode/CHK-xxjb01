@@ -69,5 +69,3 @@ class TestCheckout():
     #
     # def test_2_of_each(self):
     #     assert checkout_solution.checkout('ABCDEABCDE') == 280
-
-
