@@ -13,3 +13,5 @@ class TestCheckout():
 
     def test_discount_items(self):
         assert checkout_solution.checkout('3AA') == 180
+
+    def test_
