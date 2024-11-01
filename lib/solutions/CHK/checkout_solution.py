@@ -29,7 +29,7 @@ price_table = {'3A': 130, '5A': 200 ,'2B': 45, 'A': 50, 'B': 30, 'C': 20, 'D': 1
 def checkout(skus:str) -> int:
 
     result = 0
-    count = {'3A':0, '2B':0}
+    count = {'3A':0, '2B':0, 'B': 0}
     discounts = 0
 
     for item in skus:
@@ -52,13 +52,15 @@ def checkout(skus:str) -> int:
                 count['B'] = value % 2
             elif key == 'E':
                 if value % 2 == 0:
-                    if 'B' not in count:
-                        count['B'] = 1
-                    else:
+                    if 'B' in count.keys():
                         count['B'] += 1
+                    else:
+                        count['B'] = 1
                     discounts -= price_table['B']
 
 
         result = sum([price_table[item] * count[item] for item in count]) + discounts
 
     return result
+
+checkout('EE')
