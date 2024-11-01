@@ -10,4 +10,3 @@ class TestSum():
 
     def test_zero_sum(self):
         assert sum_solution.compute(0, 0) == 0
-
