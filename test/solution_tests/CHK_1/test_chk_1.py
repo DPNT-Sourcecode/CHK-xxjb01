@@ -48,4 +48,3 @@ class TestCheckout():
 
     def test_8_es(self):
         assert checkout_solution.checkout('EEEEEEEEBB') == 205
-
