@@ -16,19 +16,26 @@ price_table = {'3A': 130,'2B': 45, 'A': 50, 'B': 30, 'C': 20, 'D': 15 }
 
 def checkout(skus:str) -> int:
 
-    # skus.split(",")
+    result = 0
+    count = {}
 
+    for item in skus:
+        if item in price_table:
+            if item in count.keys():
+                if item == 'A' and count['A'] == 3:
+                    count['3A'] = 1
+                    count['A'] = 0
+                elif item == 'B' and count['B'] == 2:
+                    count['2B'] = 1
+                    count['B'] = 0
+                else:
+                    count[item] += 1
+            else:
+                count[item] = 1
+        else:
+            result = -1
 
-
-    partial = [-1 if item not in price_table else price_table[item] for item in skus if item in price_table]
-
-    if -1 in partial:
-        result = -1
-    else:
-        result = sum(partial)
+    result = sum(result.values())
 
     return result
-
-
-
 
