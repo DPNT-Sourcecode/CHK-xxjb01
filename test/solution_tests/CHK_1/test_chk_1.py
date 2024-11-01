@@ -26,3 +26,6 @@ class TestCheckout():
 
     def test_new_discount(self):
         assert checkout_solution.checkout('AAAAA') == 200
+
+    def test_new_discount(self):
+        assert checkout_solution.checkout('AAAAAAAA') == 200

@@ -52,8 +52,6 @@ def checkout(skus:str) -> int:
                     div_num = 5
                     count['5A'] = int(value / div_num)
 
-
-                # count['3A'] = int(value / div_num)
                 count['A'] = value % div_num
 
             elif key == 'B':
