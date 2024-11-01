@@ -48,3 +48,4 @@ class TestCheckout():
 
     def test_8_es(self):
         assert checkout_solution.checkout('EEEEEEEEBB') == 205
+        # {'3A': 0, '5A': 0, '2B': 0, 'B': 0, 'E': 8}
