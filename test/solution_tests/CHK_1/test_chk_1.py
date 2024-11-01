@@ -1,0 +1,9 @@
+from solutions.CHK import checkout_solution
+
+price_table = {'3A': 130,'2B': 45, 'A': 50, 'B': 30, 'C': 20, 'D': 15 }
+
+class TestCheckout():
+    def test_checkout(self):
+        assert checkout_solution.checkout('A') == 50
+        assert checkout_solution.checkout('B') == 30
+        assert checkout_solution.checkout('CB') == 50
