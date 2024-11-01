@@ -66,9 +66,11 @@ def checkout(skus:str) -> int:
             elif key == 'E':
                 if value % 2 == 0:
                     if count['B'] % 2 != 0 and count['B'] > 0:
-                        count['B'] -= int(value / 2)
+                        count['2B'] = int(count['B'] / 2)
+                        count['B'] = count['B'] % 2
                     elif count['2B'] > 0:
-                        count['2B'] -= int(value / 2)
+                        count['2B'] = int(count['2B'] / 2)
+                        count['B'] = count['B'] % 2
 
         result = sum([price_table[item] * count[item] for item in count])
 
@@ -77,3 +79,4 @@ def checkout(skus:str) -> int:
     return result
 
 checkout('EE')
+
