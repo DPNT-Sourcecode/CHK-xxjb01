@@ -67,7 +67,7 @@ def checkout(skus:str) -> int:
             elif key == 'E':
                 if value % 2 == 0:
                     if 'B' in count.keys():
-                        count['B'] += 1
+                        count['B'] -= value / 2
                     else:
                         count['B'] = 1
                     discounts -= price_table['B']
@@ -80,5 +80,6 @@ def checkout(skus:str) -> int:
     return result
 
 checkout('EE')
+
 
 
