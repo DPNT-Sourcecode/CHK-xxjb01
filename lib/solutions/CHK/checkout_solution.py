@@ -16,7 +16,7 @@ price_table = {'3A': 130,'2B': 45, 'A': 50, 'B': 30, 'C': 20, 'D': 15 }
 
 def checkout(skus:str) -> int:
 
-    result = sum([-1 if item not in price_table else item for item in skus if item in price_table])
+    result = sum([-1 if item not in price_table else price_table[item] for item in skus if item in price_table])
 
     return result
 
