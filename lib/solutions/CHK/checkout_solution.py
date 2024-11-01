@@ -40,10 +40,6 @@ def checkout(skus:str) -> int:
                 count['2B'] = int(value / 2)
                 count['B'] = value % 2
 
-        print(count)
-
         result = sum([price_table[item] * count[item] for item in count])
 
     return result
-
-checkout('BCDAAAAC')
