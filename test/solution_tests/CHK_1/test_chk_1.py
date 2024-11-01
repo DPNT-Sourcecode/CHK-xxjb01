@@ -9,6 +9,9 @@ class TestCheckout():
         assert checkout_solution.checkout('B') == 30
         assert checkout_solution.checkout('CB') == 50
 
+    def test_two_A(self):
+        assert checkout_solution.checkout('AA') == 100
+
     def test_discount_item(self):
         assert checkout_solution.checkout('AAA') == 130
 
