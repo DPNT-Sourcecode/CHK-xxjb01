@@ -31,12 +31,12 @@ class TestCheckout():
     def test_add_B_when_2E(self):
         assert checkout_solution.checkout('EE') == 80
 
-    def test_new_discount(self):
+    def test_new_discount_5A(self):
         assert checkout_solution.checkout('AAAAA') == 200
 
-    # def test_new_discount_multiple(self):
-    #     assert checkout_solution.checkout('AAAAAAAA') == 360
-    #
+    def test_new_discount_multiple(self):
+        assert checkout_solution.checkout('AAAAAAAA') == 360
+
     # def test_7_as(self):
     #     assert checkout_solution.checkout('AAAAAAA') == 300
     #
@@ -54,4 +54,5 @@ class TestCheckout():
     # def test_8_es(self):
     #     assert checkout_solution.checkout('EEEEEEEEBB') == 320
     #     # {'3A': 0, '5A': 0, '2B': 0, 'B': 0, 'E': 8}
+
 
