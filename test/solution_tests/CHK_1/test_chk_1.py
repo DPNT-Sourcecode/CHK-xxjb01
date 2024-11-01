@@ -43,8 +43,8 @@ class TestCheckout():
         assert checkout_solution.checkout('AAAAAA') == 250
 
     def test_multiple_es(self):
-        assert checkout_solution.checkout('EEEEBB') == 205
-        # {'3A': 0, '5A': 0, '2B': 1, 'B': 1, 'E': 4}
+        assert checkout_solution.checkout('EEEEBB') == 160
+        # {'3A': 0, '5A': 0, '2B': 0, 'B': 0, 'E': 4}
 
     def test_8_es(self):
         assert checkout_solution.checkout('EEEEEEEEBB') == 320
