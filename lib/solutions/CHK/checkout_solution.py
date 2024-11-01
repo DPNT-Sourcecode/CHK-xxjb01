@@ -12,17 +12,20 @@
 | D    | 15    |                |
 +------+-------+----------------+
 """
+from tabnanny import check
+
 price_table = {'3A': 130,'2B': 45, 'A': 50, 'B': 30, 'C': 20, 'D': 15 }
 
 def checkout(skus:str) -> int:
 
     result = 0
-    count = {}
+    count = {'3A':0, '2B':0}
 
     for item in skus:
         if item in price_table:
             if item in count.keys():
                 if item == 'A' and count[item] == 3:
+                    print(count)
                     if count['3A']:
                         count['3A'] += 1
                     else:
@@ -47,6 +50,8 @@ def checkout(skus:str) -> int:
         result = sum([price_table[item] * count[item] for item in count])
 
     return result
+
+checkout('BCDAAAAC')
 
 
 
