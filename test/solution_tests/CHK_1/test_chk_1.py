@@ -22,9 +22,3 @@ class TestCheckout():
 
     def test_invalid(self):
         assert checkout_solution.checkout('AxA') == -1
-
-
-
-
-
-
