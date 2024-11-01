@@ -23,20 +23,24 @@ def checkout(skus:str) -> int:
         if item in price_table:
             if item in count.keys():
                 if item == 'A' and count['A'] == 3:
-                    count['3A'] = 1
+                    print('here')
+                    count['3A'] += 1
                     count['A'] = 0
                 elif item == 'B' and count['B'] == 2:
-                    count['2B'] = 1
+                    count['2B'] += 1
                     count['B'] = 0
                 else:
                     count[item] += 1
+                print(count)
             else:
                 count[item] = 1
         else:
             result = -1
 
-    result = sum(count.values())
+    if result != -1:
+        result = sum(count.values())
 
     return result
+
 
 
