@@ -45,7 +45,6 @@ def checkout(skus:str) -> int:
 
         for key, value in count.items():
             if key == 'A':
-                print(f'value: {value}, remainder 5: {value % 5}, test: {value >= 4}')
                 if value >= 4 and (value % 5 == 0 or (value - 1) % 5 == 0 or (value - 2) % 5 == 0 or (value - 3) % 5 == 0):
 
                     count['5A'] = int(value / 5)
@@ -73,9 +72,10 @@ def checkout(skus:str) -> int:
 
         result = sum([price_table[item] * count[item] for item in count]) - discount * 30
 
-    print(result)
-    print(count)
+    # print(result)
+    # print(count)
 
     return result
+
 
 
