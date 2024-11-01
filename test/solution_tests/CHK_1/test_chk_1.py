@@ -16,7 +16,7 @@ class TestCheckout():
     def test_two_A(self):
         assert checkout_solution.checkout('AA') == 100
 
-    def test_discount_item(self):
+    def test_discount_item_3A(self):
         assert checkout_solution.checkout('AAA') == 130
 
     def test_discount_items(self):
