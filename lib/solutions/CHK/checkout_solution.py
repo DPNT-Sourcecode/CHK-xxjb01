@@ -18,6 +18,8 @@ def checkout(skus:str) -> int:
 
     # skus.split(",")
 
+
+
     partial = [-1 if item not in price_table else price_table[item] for item in skus if item in price_table]
 
     if -1 in partial:
@@ -26,6 +28,7 @@ def checkout(skus:str) -> int:
         result = sum(partial)
 
     return result
+
 
 
 
