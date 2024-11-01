@@ -47,11 +47,7 @@ def checkout(skus:str) -> int:
             if key == 'A':
                 count['5A'] = int(value / 5)
                 count['3A'] = int(value / 3)
-                if count['A'] % 3 == 0:
-                    div_num = 3
-                else:
-                    div_num = 5
-                count['A'] = value % div_num
+                count['A'] = value % 15
             elif key == 'B':
                 count['2B'] = int(value / 2)
                 count['B'] = value % 2
@@ -71,4 +67,5 @@ def checkout(skus:str) -> int:
     return result
 
 checkout('EE')
+
 
