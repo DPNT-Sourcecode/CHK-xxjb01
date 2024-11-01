@@ -45,12 +45,13 @@ def checkout(skus:str) -> int:
 
         for key, value in count.items():
             if key == 'A':
-                print(int(value / 5))
+
                 if value % 5 == 0 or (value - 1) % 5 == 0:
+                    print(value % 5)
                     count['5A'] = int(value / 5)
                     count['A'] = value % 5
 
-                if value % 3 == 0 or (value - 1) % 3 == 0 :
+                elif value % 3 == 0 or (value - 1) % 3 == 0 :
                     count['3A'] = int(value / 3)
                     count['A'] = value % 3
 
@@ -71,5 +72,6 @@ def checkout(skus:str) -> int:
     print(count)
 
     return result
+
 
 
