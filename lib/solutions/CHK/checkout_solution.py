@@ -35,7 +35,8 @@ def checkout(skus:str) -> int:
         else:
             result = -1
 
-    result = sum(result.values())
+    result = sum(count.values())
 
     return result
+
 
