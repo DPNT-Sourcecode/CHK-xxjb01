@@ -21,5 +21,8 @@ class TestCheckout():
     def test_invalid(self):
         assert checkout_solution.checkout('AxA') == -1
 
+    def test_add_B_when_2E(self):
+        assert checkout_solution.checkout('EE') == 80
+
     # def test_new_discount(self):
     #     assert checkout_solution.checkout('AAAAA') == 200
