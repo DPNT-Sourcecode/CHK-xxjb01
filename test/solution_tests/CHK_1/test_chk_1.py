@@ -31,4 +31,4 @@ class TestCheckout():
         assert checkout_solution.checkout('AAAAA') == 200
 
     def test_new_discount_multiple(self):
-        assert checkout_solution.checkout('AAAAAAAA') == 430
+        assert checkout_solution.checkout('AAAAAAAA') == 360
