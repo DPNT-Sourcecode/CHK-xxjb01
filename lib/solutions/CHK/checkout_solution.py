@@ -43,7 +43,7 @@ def checkout(skus:str) -> int:
     if result != -1:
 
         for key, value in count.items():
-            if key == 'A' and value % 3 == 0:
+            if key == 'A':
                 count['3A'] = int(value / 3)
                 count['A'] = value % 3
             elif key == 'B':
@@ -53,3 +53,4 @@ def checkout(skus:str) -> int:
         result = sum([price_table[item] * count[item] for item in count])
 
     return result
+
