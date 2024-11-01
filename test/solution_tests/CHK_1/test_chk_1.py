@@ -1,7 +1,5 @@
 from solutions.CHK import checkout_solution
 
-price_table = {'3A': 130,'2B': 45, 'A': 50, 'B': 30, 'C': 20, 'D': 15 }
-
 class TestCheckout():
     def test_empty(self):
         assert checkout_solution.checkout('') == 0
@@ -22,3 +20,6 @@ class TestCheckout():
 
     def test_invalid(self):
         assert checkout_solution.checkout('AxA') == -1
+
+    def test_new_discount(self):
+        assert checkout_solution.checkout('AAAAA') == 200
