@@ -19,21 +19,21 @@ class TestCheckout():
     def test_discount_item(self):
         assert checkout_solution.checkout('AAA') == 130
 
-    # def test_discount_items(self):
-    #     assert checkout_solution.checkout('AAAA') == 180
-    #
-    # def test_discount_multiple_items(self):
-    #     assert checkout_solution.checkout('BAAACADDB') == 275
-    #
-    # def test_invalid(self):
-    #     assert checkout_solution.checkout('AxA') == -1
-    #
-    # def test_add_B_when_2E(self):
-    #     assert checkout_solution.checkout('EE') == 80
-    #
-    # def test_new_discount(self):
-    #     assert checkout_solution.checkout('AAAAA') == 200
-    #
+    def test_discount_items(self):
+        assert checkout_solution.checkout('AAAA') == 180
+
+    def test_discount_multiple_items(self):
+        assert checkout_solution.checkout('BAAACADDB') == 275
+
+    def test_invalid(self):
+        assert checkout_solution.checkout('AxA') == -1
+
+    def test_add_B_when_2E(self):
+        assert checkout_solution.checkout('EE') == 80
+
+    def test_new_discount(self):
+        assert checkout_solution.checkout('AAAAA') == 200
+
     # def test_new_discount_multiple(self):
     #     assert checkout_solution.checkout('AAAAAAAA') == 360
     #
@@ -54,3 +54,4 @@ class TestCheckout():
     # def test_8_es(self):
     #     assert checkout_solution.checkout('EEEEEEEEBB') == 320
     #     # {'3A': 0, '5A': 0, '2B': 0, 'B': 0, 'E': 8}
+
