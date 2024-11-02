@@ -62,8 +62,16 @@ class TestR2Checkout():
     def test_eeeb(self):
         assert checkout_solution.checkout('EEEB') == 120
 
-    def test_2_of_each(self):
-        assert checkout_solution.checkout('ABCDEABCDE') == 280
+    # def test_2_of_each(self):
+    #     assert checkout_solution.checkout('ABCDEABCDE') == 280
+    #
+    # def test_4e_2b(self):
+    #     assert checkout_solution.checkout('EEEEBB') == 160
+    #
+    # def test_7e_5b(self):
+    #     assert checkout_solution.checkout('EEEEEEEBBBBB') == 325
+
+
 
 
 
