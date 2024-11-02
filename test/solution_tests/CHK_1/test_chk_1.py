@@ -71,8 +71,3 @@ class TestR2Checkout():
     def test_7e_5b(self):
         assert checkout_solution.checkout('EEEEEEEBBBBB') == 325
 
-
-
-
-
-
