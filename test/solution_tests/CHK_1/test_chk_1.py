@@ -1,6 +1,6 @@
 from solutions.CHK import checkout_solution
 
-class TestCheckout():
+class TestR1Checkout():
     def test_empty(self):
         assert checkout_solution.checkout('') == 0
 
@@ -13,13 +13,13 @@ class TestCheckout():
     def test_checkout_3(self):
         assert checkout_solution.checkout('CB') == 50
 
-    def test_two_A(self):
+    def test_aa(self):
         assert checkout_solution.checkout('AA') == 100
 
-    def test_discount_item_3A(self):
+    def test_discount_aaa(self):
         assert checkout_solution.checkout('AAA') == 130
 
-    def test_discount_items(self):
+    def test_discount_aaaa(self):
         assert checkout_solution.checkout('AAAA') == 180
 
     def test_discount_multiple_items(self):
@@ -28,44 +28,40 @@ class TestCheckout():
     def test_invalid(self):
         assert checkout_solution.checkout('AxA') == -1
 
-    def test_add_B_when_2E(self):
+class TestR2Checkout():
+    def test_ee(self):
         assert checkout_solution.checkout('EE') == 80
 
-    def test_new_discount_5A(self):
+    def test_new_discount_5a(self):
         assert checkout_solution.checkout('AAAAA') == 200
 
-    def test_new_discount_6A(self):
+    def test_new_discount_6a(self):
         assert checkout_solution.checkout('AAAAAA') == 250
 
-    def test_new_discount_7A(self):
+    def test_new_discount_7a(self):
         assert checkout_solution.checkout('AAAAAAA') == 300
 
-    def test_new_discount_multiple_8A(self):
+    def test_new_discount_8a(self):
         assert checkout_solution.checkout('AAAAAAAA') == 330
 
-    def test_7_as(self):
-        assert checkout_solution.checkout('AAAAAAA') == 300
+    def test_9a(self):
+        assert checkout_solution.checkout('AAAAAAAAA') == 380
 
-    def test_8_as(self):
-        assert checkout_solution.checkout('AAAAAAAA') == 330
-
-    def test_6_as(self):
+    def test_6a(self):
         assert checkout_solution.checkout('AAAAAA') == 250
         # {'3A': 0, '5A': 1,'A': 1}
 
-    def test_multiple_es(self):
+    def test_eeeebb(self):
         assert checkout_solution.checkout('EEEEBB') == 160
         # {'3A': 0, '5A': 0, '2B': 0, 'B': 0, 'E': 4}
 
-    def test_8_es(self):
+    def test_8e2b(self):
         assert checkout_solution.checkout('EEEEEEEEBB') == 320
         # {'3A': 0, '5A': 0, '2B': 0, 'B': 0, 'E': 8}
-
-    def test_9_As(self):
-        assert checkout_solution.checkout('AAAAAAAAA') == 380
 
     # def test_eeeb(self):
     #     assert checkout_solution.checkout('EEEB') == 120
     #
     # def test_2_of_each(self):
     #     assert checkout_solution.checkout('ABCDEABCDE') == 280
+
