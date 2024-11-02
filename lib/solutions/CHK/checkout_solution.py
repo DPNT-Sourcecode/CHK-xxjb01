@@ -52,9 +52,9 @@ def checkout(skus:str) -> int:
                     count['5A'] = int(value / 5)
                     count['A'] = value - count['5A'] * 5
 
-                    if value % 5 == 3:
+                    if value % 5 >= 3:
                         count['3A'] = int(value / 5)
-                        count['A'] = 0
+                        count['A'] = count['A'] - 3
                     # else:
                     #     count['A'] = value % 5
 
@@ -79,4 +79,5 @@ def checkout(skus:str) -> int:
     print(count)
 
     return result
+
 
