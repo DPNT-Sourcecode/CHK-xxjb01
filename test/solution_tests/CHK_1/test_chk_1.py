@@ -329,9 +329,9 @@ class TestR5Checkout:
     def test_multi_5(self):
         assert checkout_solution.checkout('SSTX') == 62
 
-    # def test_multi_6(self):
-    #     assert checkout_solution.checkout('STXYST') == 90 # 6 items
-    #
+    def test_multi_6(self):
+        assert checkout_solution.checkout('STXYST') == 90 # 6 items
+
     # def test_multi_7(self):
     #     assert checkout_solution.checkout('SSSTTTYYYZZZZ') == 201 # 4 promos, one extra Z
 

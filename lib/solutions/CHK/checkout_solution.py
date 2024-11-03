@@ -159,24 +159,21 @@ def checkout(skus:str) -> int:
             nonlocal discount
             discount += 45 * int(total_items / 3)
             counter = total_items - (total_items % 3)
-            while counter > 0:
-
-                while count['Z'] > 0:
-
-                    count['Z'] -= 1
-                    counter -= 1
-                while count['Y'] > 0:
-                    count['Y'] -= 1
-                    counter -= 1
-                while count['S'] > 0:
-                    count['S'] -= 1
-                    counter -= 1
-                while count['T'] > 0:
-                    count['T'] -= 1
-                    counter -= 1
-                while count['X'] > 0:
-                    count['X'] -= 1
-                    counter -= 1
+            while count['Z'] > 0 and counter > 0:
+                count['Z'] -= 1
+                counter -= 1
+            while count['Y'] > 0 and counter > 0:
+                count['Y'] -= 1
+                counter -= 1
+            while count['S'] > 0 and counter > 0:
+                count['S'] -= 1
+                counter -= 1
+            while count['T'] > 0 and counter > 0:
+                count['T'] -= 1
+                counter -= 1
+            while count['X'] > 0 and counter > 0:
+                count['X'] -= 1
+                counter -= 1
 
 
 
@@ -233,5 +230,6 @@ def checkout(skus:str) -> int:
 
 
 checkout('SSTX')
+
 
 
