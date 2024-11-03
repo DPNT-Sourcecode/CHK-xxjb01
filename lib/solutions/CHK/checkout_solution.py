@@ -90,14 +90,14 @@ def checkout(skus:str) -> int:
                     count['10H'] += 1
                     counter -= 10
                     count['H'] -= 10
-                    if counter <= 1 or count['10H'] < 10:
+                    if counter <= 1 or count['H'] < 10:
                         break
             if count['H'] > 4:
                 while counter >= 0:
                     count['5H'] += 1
                     counter -= 5
                     count['H'] -= 5
-                    if counter <= 1 or count['5H'] < 5:
+                    if counter <= 1 or count['H'] < 5:
                         break
 
 
@@ -130,6 +130,7 @@ def checkout(skus:str) -> int:
     print(f'COUNT: {count}')
 
     return result
+
 
 
 
