@@ -169,10 +169,10 @@ class TestR4Checkout:
 
     def test_3n(self):
         assert checkout_solution.checkout('NNN') == 120
-    #
-    # def test_4n1m(self):
-    #     assert checkout_solution.checkout('NNNNMM') == 160
-    #
+
+    def test_4n1m(self):
+        assert checkout_solution.checkout('NNNNM') == 160
+
     # def test_8n2m(self):
     #     assert checkout_solution.checkout('NNNNNNNNMM') == 320
     #
@@ -187,3 +187,4 @@ class TestR4Checkout:
     #
     # def test_7n5m(self):
     #     assert checkout_solution.checkout('NNNNNNNMMMMM') == 325
+
