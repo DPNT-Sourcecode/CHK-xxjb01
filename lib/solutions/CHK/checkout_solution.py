@@ -136,8 +136,7 @@ def checkout(skus:str) -> int:
                 # discount -= 30
                 if count['Q'] > 0:
                     count['Q'] -= 1
-                else:
-                    break
+                print(count['Q'])
                 total_q = count['Q']
                 # if total_q == 0:
                 #     count['Q'] += 1

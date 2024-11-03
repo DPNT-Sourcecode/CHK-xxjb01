@@ -252,9 +252,8 @@ class TestR4Checkout:
         assert checkout_solution.checkout('RRRRQQ') == 230
 
     def test_7r6q(self):
-        assert checkout_solution.checkout('RRRRRRRQQQQQQ') == 430 # (350+80+30)
-        # 7R 6Q -> 350 +
-
+        assert checkout_solution.checkout('RRRRRRRQQQQQQ') == 460 # (350+80+30)
+        # 7R 6Q -> 350(7r) + 80 (3q) + 30 (1q)
     # U
 
     def test_1u(self):
@@ -306,6 +305,6 @@ class TestR4Checkout:
     def test_4v(self):
         assert checkout_solution.checkout('VVVV') == 180
 
-    # def test_from_deploy(self):
-    #     assert checkout_solution.checkout('PPPPQRUVPQRUVPQRUVSU') == 740
+    def test_from_deploy(self):
+        assert checkout_solution.checkout('PPPPQRUVPQRUVPQRUVSU') == 740
         # PPP PPP QQQ RRR S UUUU VVV
