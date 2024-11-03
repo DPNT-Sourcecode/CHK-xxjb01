@@ -130,12 +130,11 @@ def checkout(skus:str) -> int:
         value = count['R']
         if value > 2:
             counter = value
-            if count['Q'] > 0:
-                while counter >= 0:
-                    count['Q'] -= 1
-                    counter -= 3
-                    if counter <= 1 or count['Q'] == 0:
-                        break
+            while counter >= 0:
+                count['Q'] -= 1
+                counter -= 3
+                if counter <= 1 or count['Q'] == 0:
+                    break
 
     for item in skus:
         if item in price_table:
@@ -165,5 +164,6 @@ def checkout(skus:str) -> int:
     print(f'COUNT: {count}')
 
     return result
+
 
 
