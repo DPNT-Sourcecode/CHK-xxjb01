@@ -127,14 +127,16 @@ def checkout(skus:str) -> int:
         count['Q'] = value % 3
 
     def clear_r():
+        nonlocal discount
         value = count['R']
-        if value > 2:
-            counter = value
-            while counter >= 0:
-                count['Q'] -= 1
+        counter = value
+        if value >= 3:
+            while counter >= 3:
                 counter -= 3
-                if counter <= 1 or count['Q'] == 0:
-                    break
+                discount -= 30
+                total_q = count['Q']
+                if total_q == 0:
+                    count['Q'] += 1
 
     for item in skus:
         if item in price_table:
@@ -164,6 +166,7 @@ def checkout(skus:str) -> int:
     print(f'COUNT: {count}')
 
     return result
+
 
 
 
