@@ -175,27 +175,6 @@ def checkout(skus:str) -> int:
                 count['X'] -= 1
                 counter -= 1
 
-
-
-            # counter = total_items
-            # while counter >= 3:
-            #     if count['X'] > 0:
-            #         count['X'] -= 1
-            #     elif count['Y'] > 0:
-            #         count['Y'] -= 1
-            #     elif count['S'] > 0:
-            #         count['S'] -= 1
-            #     elif count['T'] > 0:
-            #         count['T'] -= 1
-            #     elif count['Z'] > 0:
-            #         count['Z'] -= 1
-            #
-            #     counter -= 1
-
-        # count['3Q'] = int(value / 3)
-        # count['Q'] = value % 3
-
-
     for item in skus:
         if item in price_table:
             if item in count.keys():
@@ -230,6 +209,3 @@ def checkout(skus:str) -> int:
 
 
 checkout('SSTX')
-
-
-
