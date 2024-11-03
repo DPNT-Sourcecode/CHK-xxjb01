@@ -134,7 +134,10 @@ def checkout(skus:str) -> int:
             while counter >= 3:
                 counter -= 3
                 # discount -= 30
-                count['Q'] -= 1
+                if count['Q'] > 0:
+                    count['Q'] -= 1
+                else:
+                    break
                 total_q = count['Q']
                 # if total_q == 0:
                 #     count['Q'] += 1
