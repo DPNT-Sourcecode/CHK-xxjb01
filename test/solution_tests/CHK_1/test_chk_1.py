@@ -143,22 +143,22 @@ class TestR4Checkout:
         assert checkout_solution.checkout('K') == 70
 
     def test_2k(self):
-        assert checkout_solution.checkout('KK') == 150
+        assert checkout_solution.checkout('KK') == 120
 
     def test_3k(self):
-        assert checkout_solution.checkout('KKK') == 220
+        assert checkout_solution.checkout('KKK') == 190
 
     def test_4k(self):
-        assert checkout_solution.checkout('KKKK') == 300
+        assert checkout_solution.checkout('KKKK') == 240
 
     def test_5k(self):
-        assert checkout_solution.checkout('KKKKK') == 370
+        assert checkout_solution.checkout('KKKKK') == 310
 
     def test_10k(self):
-        assert checkout_solution.checkout('KKKKKKKKKK') == 750
+        assert checkout_solution.checkout('KKKKKKKKKK') == 600
 
     def test_11k(self):
-        assert checkout_solution.checkout('KKKKKKKKKKK') == 820
+        assert checkout_solution.checkout('KKKKKKKKKKK') == 670
 
     # N
     def test_1n(self):
@@ -358,6 +358,7 @@ class TestR5Checkout:
     #
     # def test_multi_11(self):
     #     assert checkout_solution.checkout('SSS') == 45
+
 
 
 
