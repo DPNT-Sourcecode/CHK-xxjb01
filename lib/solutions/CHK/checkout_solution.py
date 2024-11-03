@@ -160,7 +160,9 @@ def checkout(skus:str) -> int:
             discount += 45 * int(total_items / 3)
             counter = total_items
             while counter > 0:
+
                 while count['Z'] > 0:
+
                     count['Z'] -= 1
                     counter -= 1
                 while count['Y'] > 0:
@@ -228,4 +230,7 @@ def checkout(skus:str) -> int:
     print(f'COUNT: {count}')
 
     return result
+
+
+checkout('SSTX')
 
