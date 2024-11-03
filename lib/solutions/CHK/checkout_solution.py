@@ -107,12 +107,13 @@ def checkout(skus:str) -> int:
     def clear_n():
         nonlocal discount
         value = count['N']
-        counter = count['N']
+        counter = value
         if value >= 3:
             while counter >= 3:
                 counter -= 3
                 discount -= 15
                 count['M'] += 1
+                print(f'counter: {counter}, discount: {discount}, count[M]: {count['M']}')
         # if value > 3:
         #     counter = count['N']
         #     while counter >= 3:
@@ -144,5 +145,6 @@ def checkout(skus:str) -> int:
     print(f'COUNT: {count}')
 
     return result
+
 
 
