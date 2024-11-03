@@ -86,11 +86,12 @@ def checkout(skus:str) -> int:
         clear_b()
         clear_f()
 
-        result = sum([price_table[item] * count[item] for item in count])
+        result = sum([price_table[item] * count[item] for item in count]) + discount
 
     # print(result)
     # print(count)
 
     return result
+
 
 

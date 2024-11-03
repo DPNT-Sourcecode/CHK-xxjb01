@@ -75,4 +75,38 @@ class TestR3Checkout:
     def test_1f(self):
         assert checkout_solution.checkout('F') == 10
 
+    def test_2f(self):
+        assert checkout_solution.checkout('FF') == 20
+
+    def test_3f(self):
+        assert checkout_solution.checkout('FFF') == 20
+
+    # def test_4f(self):
+    #     assert checkout_solution.checkout('FFFF') == 30
+    #
+    # def test_5f(self):
+    #     assert checkout_solution.checkout('FFFFF') == 40
+    #
+    # def test_6f(self):
+    #     assert checkout_solution.checkout('FFFFFF') == 40
+    #
+    # def test_7f(self):
+    #     assert checkout_solution.checkout('FFFFFFF') == 50
+    #
+    # def test_8f(self):
+    #     assert checkout_solution.checkout('FFFFFFFF') == 60
+    #
+    # def test_9f(self):
+    #     assert checkout_solution.checkout('FFFFFFFFF') == 60
+    #
+    # def test_10f(self):
+    #     assert checkout_solution.checkout('FFFFFFFFFF') == 70
+    #
+    # def test_11f(self):
+    #     assert checkout_solution.checkout('FFFFFFFFFFF') == 80
+    #
+    # def test_12f(self):
+    #     assert checkout_solution.checkout('FFFFFFFFFFFF') == 80
+
+
 
