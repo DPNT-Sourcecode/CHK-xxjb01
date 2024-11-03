@@ -145,8 +145,24 @@ def checkout(skus:str) -> int:
         all_items_in_discount = ['S','T','X','Y','Z']
 
         total_items = sum([count[dis_item] for dis_item in all_items_in_discount])
-        count['3Q'] = int(value / 3)
-        count['Q'] = value % 3
+        if total_items > 2:
+            counter = total_items
+            while counter >= 3:
+                if count['X'] >= 0:
+                    count['X'] -= counter
+                elif count['Y'] >= 0:
+                    count['Y'] -= counter
+                elif count['S'] >= 0:
+                    count['S'] -= counter
+                elif count['T'] >= 0:
+                    count['T'] -= counter
+                elif count['Z'] >= 0:
+                    count['Z'] -= counter
+
+                counter -= 1
+
+        # count['3Q'] = int(value / 3)
+        # count['Q'] = value % 3
 
 
     for item in skus:
@@ -180,4 +196,5 @@ def checkout(skus:str) -> int:
     print(f'COUNT: {count}')
 
     return result
+
 
