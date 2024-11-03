@@ -1,27 +1,5 @@
-
-
 # noinspection PyUnusedLocal
 # skus = unicode string
-"""
-+------+-------+----------------+
-| Item | Price | Special offers |
-+------+-------+----------------+
-| A    | 50    | 3A for 130     |
-| B    | 30    | 2B for 45      |
-| C    | 20    |                |
-| D    | 15    |                |
-+------+-------+----------------+
-
-+------+-------+------------------------+
-| Item | Price | Special offers         |
-+------+-------+------------------------+
-| A    | 50    | 3A for 130, 5A for 200 |
-| B    | 30    | 2B for 45              |
-| C    | 20    |                        |
-| D    | 15    |                        |
-| E    | 40    | 2E get one B free      |
-+------+-------+------------------------+
-"""
 from tabnanny import check
 
 price_table = {'A': 50, '3A': 130, '5A': 200, 'B': 30, '2B': 45, 'C': 20, 'D': 15, 'E': 40, 'F': 10, 'G': 20,
@@ -133,13 +111,8 @@ def checkout(skus:str) -> int:
         if value >= 3:
             while counter >= 3:
                 counter -= 3
-                # discount -= 30
                 if count['Q'] > 0:
                     count['Q'] -= 1
-                print(count['Q'])
-                total_q = count['Q']
-                # if total_q == 0:
-                #     count['Q'] += 1
 
     def clear_u():
         nonlocal discount
@@ -199,3 +172,4 @@ def checkout(skus:str) -> int:
     return result
 
 checkout('RRRRRRRQQQQQQ')
+
