@@ -226,4 +226,5 @@ class TestR4Checkout:
     def test_11q(self):
         assert checkout_solution.checkout('QQQQQQQQQQQ') == 300
 
+    # R
 
