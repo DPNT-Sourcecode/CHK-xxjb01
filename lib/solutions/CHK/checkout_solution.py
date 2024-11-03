@@ -158,7 +158,7 @@ def checkout(skus:str) -> int:
         if total_items > 2:
             nonlocal discount
             discount += 45 * int(total_items / 3)
-            counter = total_items
+            counter = total_items - (total_items % 3)
             while counter > 0:
 
                 while count['Z'] > 0:
@@ -233,4 +233,5 @@ def checkout(skus:str) -> int:
 
 
 checkout('SSTX')
+
 
