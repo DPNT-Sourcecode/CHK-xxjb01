@@ -1,5 +1,6 @@
 from solutions.CHK import checkout_solution
 
+
 class TestR1Checkout:
     def test_empty(self):
         assert checkout_solution.checkout('') == 0
@@ -27,6 +28,7 @@ class TestR1Checkout:
 
     def test_invalid(self):
         assert checkout_solution.checkout('AxA') == -1
+
 
 class TestR2Checkout:
     def test_ee(self):
@@ -71,6 +73,7 @@ class TestR2Checkout:
     def test_7e_5b(self):
         assert checkout_solution.checkout('EEEEEEEBBBBB') == 325
 
+
 class TestR3Checkout:
     def test_1f(self):
         assert checkout_solution.checkout('F') == 10
@@ -108,6 +111,19 @@ class TestR3Checkout:
     def test_12f(self):
         assert checkout_solution.checkout('FFFFFFFFFFFF') == 80
 
+
 class TestR4Checkout:
-    def test_empty(self):
-        assert checkout_solution.checkout('') == 0
+    def test_1k(self):
+        assert checkout_solution.checkout('K') == 80
+
+    def test_2k(self):
+        assert checkout_solution.checkout('KK') == 150
+
+    def test_3k(self):
+        assert checkout_solution.checkout('KKK') == 230
+
+    def test_4k(self):
+        assert checkout_solution.checkout('KKKK') == 300
+
+    def test_5k(self):
+        assert checkout_solution.checkout('KKKKK') == 380

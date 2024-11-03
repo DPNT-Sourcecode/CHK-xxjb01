@@ -24,16 +24,19 @@
 """
 from tabnanny import check
 
-price_table = {'3A': 130, '5A': 200 ,'2B': 45, 'A': 50,
-               'B': 30, 'C': 20, 'D': 15, 'E': 40,
-               'F': 10, 'G': 20, 'H': 10, 'I': 35, 'J': 60,
-               }
+price_table = {'A': 50, '3A': 130, '5A': 200, 'B': 30, '2B': 45, 'C': 20, 'D': 15, 'E': 40, 'F': 10, 'G': 20,
+               'H': 10, '5H': 45, '10H': 80, 'I': 35, 'J': 60, 'K': 80, '2K':150, 'L': 90, 'M': 15,
+               'N': 40, 'O': 10, 'P': 50, '5P':200, 'Q': 30, '3Q':80, 'R': 50, 'S': 30, 'T': 20,' U': 40,
+               'V': 50, '2V':90, '3V':130, 'W': 20, 'X': 90, 'Y': 10, 'Z': 50}
 
 def checkout(skus:str) -> int:
 
     result = 0
-    count = {'A':0, '3A':0, '5A':0, '2B':0, 'B': 0, 'E': 0, 'F': 0}
     discount = 0
+    count = {'A': 0, '3A': 0, '5A': 0, 'B': 0, '2B': 0, 'C': 0, 'D': 0, 'E': 0, 'F': 0, 'G': 0,
+               'H': 0, '5H': 0, '10H': 0, 'I': 0, 'J': 0, 'K': 0, '2K':0, 'L': 0, 'M': 0,
+               'N': 0, 'O': 0, 'P': 0, '5P':0, 'Q': 0, '3Q': 0, 'R': 0, 'S': 0, 'T': 0,' U': 0,
+               'V': 0, '2V':0, '3V':0, 'W': 0, 'X': 0, 'Y': 0, 'Z': 0}
 
     def clear_a():
         value = count['A']
@@ -78,6 +81,14 @@ def checkout(skus:str) -> int:
                 counter -= 3
                 discount -= 10
 
+    def clear_h():
+        pass
+
+    def clear_k():
+        value = count['K']
+        count['2K'] = int(value / 2)
+        count['K'] = value % 2
+
     for item in skus:
         if item in price_table:
             if item in count.keys():
@@ -93,10 +104,12 @@ def checkout(skus:str) -> int:
         clear_e()
         clear_b()
         clear_f()
+        clear_h()
+        clear_k()
 
         result = sum([price_table[item] * count[item] for item in count]) + discount
 
-    # print(f'RESULT: {result}')
-    # print(f'COUNT: {count}')
+    print(f'RESULT: {result}')
+    print(f'COUNT: {count}')
 
     return result
