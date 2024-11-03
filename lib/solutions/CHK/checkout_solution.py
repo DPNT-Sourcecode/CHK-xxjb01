@@ -112,13 +112,10 @@ def checkout(skus:str) -> int:
             while counter >= 3:
                 counter -= 3
                 discount -= 15
-                count['M'] += 1
-                print(f'counter: {counter}, discount: {discount}, count[M]: {count['M']}')
-        # if value > 3:
-        #     counter = count['N']
-        #     while counter >= 3:
-        #         counter -= 3
-        #         discount -= 10
+                total_m = count['M']
+                if total_m == 0:
+                    count['M'] += 1
+
 
     for item in skus:
         if item in price_table:
