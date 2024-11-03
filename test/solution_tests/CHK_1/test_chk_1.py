@@ -253,6 +253,3 @@ class TestR4Checkout:
 
     def test_7r6q(self):
         assert checkout_solution.checkout('RRRRRRRQQQQQQ') == 470
-
-
-
