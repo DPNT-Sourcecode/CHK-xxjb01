@@ -154,5 +154,15 @@ class TestR4Checkout:
     def test_5k(self):
         assert checkout_solution.checkout('KKKKK') == 380
 
+    def test_10k(self):
+        assert checkout_solution.checkout('KKKKKKKKKK') == 1250
+
+    def test_11k(self):
+        assert checkout_solution.checkout('KKKKKKKKKKK') == 1260
+
+    # N
+
+
+
 
 
