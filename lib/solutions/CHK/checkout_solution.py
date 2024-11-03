@@ -71,7 +71,6 @@ def checkout(skus:str) -> int:
             discount -= 10
         if value > 2:
             counter = count['F']
-            print(counter)
             while counter >= 3:
                 counter -= 3
                 discount -= 10
@@ -94,10 +93,11 @@ def checkout(skus:str) -> int:
 
         result = sum([price_table[item] * count[item] for item in count]) + discount
 
-    print(f'RESULT: {result}')
-    print(f'COUNT: {count}')
+    # print(f'RESULT: {result}')
+    # print(f'COUNT: {count}')
 
     return result
+
 
 
 
