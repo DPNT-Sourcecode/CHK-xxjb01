@@ -123,11 +123,20 @@ class TestR4Checkout:
     def test_9h(self):
         assert checkout_solution.checkout('HHHHHHHHH') == 85
 
-    # def test_10h(self):
-    #     assert checkout_solution.checkout('HHHHHHHHHH') == 80
-    #
-    # def test_11h(self):
-    #     assert checkout_solution.checkout('HHHHHHHHHHH') == 90
+    def test_10h(self):
+        assert checkout_solution.checkout('HHHHHHHHHH') == 80
+
+    def test_11h(self):
+        assert checkout_solution.checkout('HHHHHHHHHHH') == 90
+
+    def test_20h(self):
+        assert checkout_solution.checkout('HHHHHHHHHHHHHHHHHHHH') == 160
+
+    def test_21h(self):
+        assert checkout_solution.checkout('HHHHHHHHHHHHHHHHHHHHH') == 170
+
+    def test_25h(self):
+        assert checkout_solution.checkout('HHHHHHHHHHHHHHHHHHHHHHHHH') == 205
 
     # K
     def test_1k(self):
@@ -144,5 +153,6 @@ class TestR4Checkout:
 
     def test_5k(self):
         assert checkout_solution.checkout('KKKKK') == 380
+
 
 
