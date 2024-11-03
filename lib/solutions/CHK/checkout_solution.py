@@ -76,8 +76,6 @@ def checkout(skus:str) -> int:
                 counter -= 3
                 discount -= 10
 
-
-
     for item in skus:
         if item in price_table:
             if item in count.keys():
@@ -100,6 +98,7 @@ def checkout(skus:str) -> int:
     print(f'COUNT: {count}')
 
     return result
+
 
 
 
