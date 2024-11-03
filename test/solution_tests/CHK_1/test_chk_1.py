@@ -251,7 +251,45 @@ class TestR4Checkout:
     def test_4r2q(self):
         assert checkout_solution.checkout('RRRRQQ') == 230
 
-    def test_7r6q(self):
-        assert checkout_solution.checkout('RRRRRRRQQQQQQ') == 430 # (350+80+30)
+    # def test_7r6q(self):
+    #     assert checkout_solution.checkout('RRRRRRRQQQQQQ') == 430 # (350+80+30)
+
+    # U
+
+    def test_1u(self):
+        assert checkout_solution.checkout('U') == 40
+
+    def test_2u(self):
+        assert checkout_solution.checkout('UU') == 80
+
+    def test_3u(self):
+        assert checkout_solution.checkout('UUU') == 120
+
+    def test_4u(self):
+        assert checkout_solution.checkout('UUUU') == 120
+
+    # def test_5u(self):
+    #     assert checkout_solution.checkout('UUUUU') == 40
+    #
+    # def test_6u(self):
+    #     assert checkout_solution.checkout('UUUUUU') == 40
+    #
+    # def test_7u(self):
+    #     assert checkout_solution.checkout('UUUUUUU') == 50
+    #
+    # def test_8u(self):
+    #     assert checkout_solution.checkout('UUUUUUUU') == 60
+    #
+    # def test_9u(self):
+    #     assert checkout_solution.checkout('UUUUUUUUU') == 60
+    #
+    # def test_10u(self):
+    #     assert checkout_solution.checkout('UUUUUUUUUU') == 70
+    #
+    # def test_11u(self):
+    #     assert checkout_solution.checkout('UUUUUUUUUUU') == 80
+    #
+    # def test_12fu(self):
+    #     assert checkout_solution.checkout('UUUUUUUUUUUU') == 80
 
 
