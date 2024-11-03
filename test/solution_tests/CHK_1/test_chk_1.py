@@ -1,6 +1,6 @@
 from solutions.CHK import checkout_solution
 
-class TestR1Checkout():
+class TestR1Checkout:
     def test_empty(self):
         assert checkout_solution.checkout('') == 0
 
@@ -28,7 +28,7 @@ class TestR1Checkout():
     def test_invalid(self):
         assert checkout_solution.checkout('AxA') == -1
 
-class TestR2Checkout():
+class TestR2Checkout:
     def test_ee(self):
         assert checkout_solution.checkout('EE') == 80
 
@@ -70,4 +70,9 @@ class TestR2Checkout():
 
     def test_7e_5b(self):
         assert checkout_solution.checkout('EEEEEEEBBBBB') == 325
+
+class TestR3Checkout:
+    def test_1f(self):
+        assert checkout_solution.checkout('F') == 10
+
 

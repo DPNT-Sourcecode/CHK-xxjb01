@@ -62,6 +62,9 @@ def checkout(skus:str) -> int:
         count['2B'] = int(value / 2)
         count['B'] = value % 2
 
+    def clear_f():
+        value = count['F']
+
     for item in skus:
         if item in price_table:
             if item in count.keys():
@@ -83,3 +86,4 @@ def checkout(skus:str) -> int:
     # print(count)
 
     return result
+
