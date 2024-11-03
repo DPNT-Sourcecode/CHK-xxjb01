@@ -317,12 +317,12 @@ class TestR5Checkout:
     def test_multi_1(self):
         assert checkout_solution.checkout('SSS') == 45
 
-    # def test_multi_2(self):
-    #     assert checkout_solution.checkout('TTT') == 45
-    #
-    # def test_multi_3(self):
-    #     assert checkout_solution.checkout('STS') == 45
-    #
+    def test_multi_2(self):
+        assert checkout_solution.checkout('TTT') == 45
+
+    def test_multi_3(self):
+        assert checkout_solution.checkout('STS') == 45
+
     # def test_multi_4(self):
     #     assert checkout_solution.checkout('XYZ') == 45
     #

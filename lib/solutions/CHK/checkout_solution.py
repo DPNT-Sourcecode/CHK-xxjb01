@@ -147,18 +147,18 @@ def checkout(skus:str) -> int:
 
         for key, value in count.items():
             if key in all_items_in_discount and value > 0:
-                if key in discounting_from:
-                    discounting_from[key] += 1
-                else:
-                    discounting_from[key] = 1
+                discounting_from[key] = value
 
         total_items = sum([count[dis_item] for dis_item in all_items_in_discount])
 
         if total_items > 2:
             nonlocal discount
+            print(discount, total_items/3)
             discount += 45 * int(total_items / 3)
+            print(discount, total_items / 3)
             for k, v in discounting_from.items():
                 print(k, v)
+                count[k] = v % 3
 
 
             # counter = total_items
@@ -211,4 +211,5 @@ def checkout(skus:str) -> int:
     print(f'COUNT: {count}')
 
     return result
+
 
