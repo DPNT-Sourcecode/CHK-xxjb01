@@ -323,17 +323,17 @@ class TestR5Checkout:
     def test_multi_3(self):
         assert checkout_solution.checkout('STS') == 45
 
-    # def test_multi_4(self):
-    #     assert checkout_solution.checkout('XYZ') == 45
-    #
-    # def test_multi_5(self):
-    #     assert checkout_solution.checkout('SSTX') == 45
-    #
-    # def test_multi_6(self):
-    #     assert checkout_solution.checkout('STXYST') == 90 # 6 items
-    #
-    # def test_multi_7(self):
-    #     assert checkout_solution.checkout('SSSTTTYYYZZZZ') == 201 # 4 promos, one extra Z
+    def test_multi_4(self):
+        assert checkout_solution.checkout('XYZ') == 45
+
+    def test_multi_5(self):
+        assert checkout_solution.checkout('SSTX') == 45
+
+    def test_multi_6(self):
+        assert checkout_solution.checkout('STXYST') == 90 # 6 items
+
+    def test_multi_7(self):
+        assert checkout_solution.checkout('SSSTTTYYYZZZZ') == 201 # 4 promos, one extra Z
 
 
 
@@ -351,3 +351,4 @@ class TestR5Checkout:
     #
     # def test_multi_11(self):
     #     assert checkout_solution.checkout('SSS') == 45
+
