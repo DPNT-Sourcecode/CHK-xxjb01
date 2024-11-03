@@ -116,6 +116,10 @@ def checkout(skus:str) -> int:
                 if total_m == 0:
                     count['M'] += 1
 
+    def clear_p():
+        value = count['P']
+        count['5P'] = int(value / 5)
+        count['P'] = value % 5
 
     for item in skus:
         if item in price_table:
@@ -135,6 +139,7 @@ def checkout(skus:str) -> int:
         clear_h()
         clear_k()
         clear_n()
+        clear_p()
 
         result = sum([price_table[item] * count[item] for item in count]) + discount
 
