@@ -145,4 +145,3 @@ class TestR4Checkout:
     def test_5k(self):
         assert checkout_solution.checkout('KKKKK') == 380
 
-
