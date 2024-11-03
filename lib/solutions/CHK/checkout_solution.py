@@ -150,6 +150,20 @@ def checkout(skus:str) -> int:
                 counter -= 4
                 discount -= 40
 
+    def clear_v():
+        value = count['V']
+        if value >= 3:
+            count['3V'] = int(value / 3)
+            count['V'] = value - count['3V'] * 3
+
+            if value % 3 >= 2:
+                count['2V'] = int(value / 3)
+                count['V'] = count['V'] - 2
+
+        elif value < 3 and (value % 2 == 0 or (value - 1) % 2 == 0):
+            count['2V'] = int(value / 2)
+            count['V'] = value % 2
+
     for item in skus:
         if item in price_table:
             if item in count.keys():
@@ -172,6 +186,7 @@ def checkout(skus:str) -> int:
         clear_r()
         clear_q()
         clear_u()
+        clear_v()
 
         result = sum([price_table[item] * count[item] for item in count]) + discount
 
@@ -181,3 +196,4 @@ def checkout(skus:str) -> int:
     return result
 
 checkout('RRRRRRRQQQQQQ')
+

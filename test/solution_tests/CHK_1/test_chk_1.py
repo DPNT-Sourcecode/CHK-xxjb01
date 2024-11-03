@@ -292,4 +292,18 @@ class TestR4Checkout:
     # def test_12fu(self):
     #     assert checkout_solution.checkout('UUUUUUUUUUUU') == 80
 
+    # V
+    def test_v(self):
+        assert checkout_solution.checkout('V') == 50
+
+    def test_2v(self):
+        assert checkout_solution.checkout('VV') == 90
+
+    def test_3v(self):
+        assert checkout_solution.checkout('VVV') == 130
+
+    def test_4v(self):
+        assert checkout_solution.checkout('VVVV') == 180
+
+
 
