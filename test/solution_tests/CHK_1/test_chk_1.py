@@ -108,6 +108,9 @@ class TestR3Checkout:
     def test_12f(self):
         assert checkout_solution.checkout('FFFFFFFFFFFF') == 80
 
+class TestR4Checkout:
+    def test_empty(self):
+        assert checkout_solution.checkout('') == 0
 
 
 

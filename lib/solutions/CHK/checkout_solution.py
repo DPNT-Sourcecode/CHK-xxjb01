@@ -24,7 +24,10 @@
 """
 from tabnanny import check
 
-price_table = {'3A': 130, '5A': 200 ,'2B': 45, 'A': 50, 'B': 30, 'C': 20, 'D': 15, 'E': 40, 'F': 10}
+price_table = {'3A': 130, '5A': 200 ,'2B': 45, 'A': 50,
+               'B': 30, 'C': 20, 'D': 15, 'E': 40,
+               'F': 10, 'G': 20, 'H': 10, 'I': 35, 'J': 60,
+               }
 
 def checkout(skus:str) -> int:
 
