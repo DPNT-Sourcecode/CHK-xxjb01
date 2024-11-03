@@ -119,10 +119,10 @@ class TestR4Checkout:
 
     def test_5h(self):
         assert checkout_solution.checkout('HHHHH') == 45
-    #
-    # def test_9h(self):
-    #     assert checkout_solution.checkout('HHHHHHHHH') == 85
-    #
+
+    def test_9h(self):
+        assert checkout_solution.checkout('HHHHHHHHH') == 85
+
     # def test_10h(self):
     #     assert checkout_solution.checkout('HHHHHHHHHH') == 80
     #
@@ -144,4 +144,5 @@ class TestR4Checkout:
 
     def test_5k(self):
         assert checkout_solution.checkout('KKKKK') == 380
+
 
