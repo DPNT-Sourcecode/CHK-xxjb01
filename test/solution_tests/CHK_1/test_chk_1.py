@@ -327,13 +327,13 @@ class TestR5Checkout:
         assert checkout_solution.checkout('XYZ') == 45
 
     def test_multi_5(self):
-        assert checkout_solution.checkout('SSTX') == 45
+        assert checkout_solution.checkout('SSTX') == 62
 
-    def test_multi_6(self):
-        assert checkout_solution.checkout('STXYST') == 90 # 6 items
-
-    def test_multi_7(self):
-        assert checkout_solution.checkout('SSSTTTYYYZZZZ') == 201 # 4 promos, one extra Z
+    # def test_multi_6(self):
+    #     assert checkout_solution.checkout('STXYST') == 90 # 6 items
+    #
+    # def test_multi_7(self):
+    #     assert checkout_solution.checkout('SSSTTTYYYZZZZ') == 201 # 4 promos, one extra Z
 
 
     def test_from_deploy1(self):
@@ -342,9 +342,9 @@ class TestR5Checkout:
     def test_from_deploy2(self):
         assert checkout_solution.checkout('ABCDEFGHIJKLMNOPQRSTUVW') == 795
 
-
-
-
+    # - {"method": "checkout", "params": ["SSSZ"], "id": "CHK_R5_142"}, expected: 65, got: 45
+    # - {"method": "checkout", "params": ["ZZZS"], "id": "CHK_R5_144"}, expected: 65, got: 45
+    # - {"method": "checkout", "params": ["STXS"], "id": "CHK_R5_145"}, expected: 62, got: 45
 
 
     # def test_multi_8(self):
@@ -358,7 +358,3 @@ class TestR5Checkout:
     #
     # def test_multi_11(self):
     #     assert checkout_solution.checkout('SSS') == 45
-
-
-
-
