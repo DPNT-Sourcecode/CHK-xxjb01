@@ -24,12 +24,13 @@
 """
 from tabnanny import check
 
-price_table = {'3A': 130, '5A': 200 ,'2B': 45, 'A': 50, 'B': 30, 'C': 20, 'D': 15, 'E': 40 }
+price_table = {'3A': 130, '5A': 200 ,'2B': 45, 'A': 50, 'B': 30, 'C': 20, 'D': 15, 'E': 40, 'F': 10}
 
 def checkout(skus:str) -> int:
 
     result = 0
-    count = {'A':0, '3A':0, '5A':0, '2B':0, 'B': 0, 'E': 0}
+    count = {'A':0, '3A':0, '5A':0, '2B':0, 'B': 0, 'E': 0, 'F': 0}
+    discount = 0
 
     def clear_a():
         value = count['A']
@@ -63,7 +64,11 @@ def checkout(skus:str) -> int:
         count['B'] = value % 2
 
     def clear_f():
+        nonlocal discount
         value = count['F']
+        if value >= 2:
+            count['F'] += 1
+            discount =- 10
 
     for item in skus:
         if item in price_table:
@@ -79,6 +84,7 @@ def checkout(skus:str) -> int:
         clear_a()
         clear_e()
         clear_b()
+        clear_f()
 
         result = sum([price_table[item] * count[item] for item in count])
 
@@ -86,4 +92,5 @@ def checkout(skus:str) -> int:
     # print(count)
 
     return result
+
 
