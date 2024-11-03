@@ -252,5 +252,6 @@ class TestR4Checkout:
         assert checkout_solution.checkout('RRRRQQ') == 230
 
     def test_7r6q(self):
-        assert checkout_solution.checkout('RRRRRRRQQQQQQ') == 430 # (350+80)
+        assert checkout_solution.checkout('RRRRRRRQQQQQQ') == 430 # (350+80+30)
+
 
