@@ -99,12 +99,21 @@ def checkout(skus:str) -> int:
                     count['H'] -= 5
                     if counter <= 1 or count['H'] < 5:
                         break
-
-
     def clear_k():
         value = count['K']
         count['2K'] = int(value / 2)
         count['K'] = value % 2
+
+    def clear_n():
+        value = count['N']
+        if value > 1:
+            counter = value
+            if count['M'] > 0:
+                while counter >= 0:
+                    count['M'] -= 1
+                    counter -= 3
+                    if counter <= 1 or count['M'] == 0:
+                        break
 
     for item in skus:
         if item in price_table:
@@ -123,6 +132,7 @@ def checkout(skus:str) -> int:
         clear_f()
         clear_h()
         clear_k()
+        clear_n()
 
         result = sum([price_table[item] * count[item] for item in count]) + discount
 
