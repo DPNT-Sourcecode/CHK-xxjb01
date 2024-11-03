@@ -146,20 +146,23 @@ def checkout(skus:str) -> int:
         # discounting_from =
         total_items = sum([count[dis_item] for dis_item in all_items_in_discount])
         if total_items > 2:
-            counter = total_items
-            while counter >= 3:
-                if count['X'] > 0:
-                    count['X'] -= 1
-                elif count['Y'] > 0:
-                    count['Y'] -= 1
-                elif count['S'] > 0:
-                    count['S'] -= 1
-                elif count['T'] > 0:
-                    count['T'] -= 1
-                elif count['Z'] > 0:
-                    count['Z'] -= 1
+            nonlocal discount
+            discount = -45 * int(total_items / 3)
 
-                counter -= 1
+            # counter = total_items
+            # while counter >= 3:
+            #     if count['X'] > 0:
+            #         count['X'] -= 1
+            #     elif count['Y'] > 0:
+            #         count['Y'] -= 1
+            #     elif count['S'] > 0:
+            #         count['S'] -= 1
+            #     elif count['T'] > 0:
+            #         count['T'] -= 1
+            #     elif count['Z'] > 0:
+            #         count['Z'] -= 1
+            #
+            #     counter -= 1
 
         # count['3Q'] = int(value / 3)
         # count['Q'] = value % 3
@@ -196,6 +199,7 @@ def checkout(skus:str) -> int:
     print(f'COUNT: {count}')
 
     return result
+
 
 
 
