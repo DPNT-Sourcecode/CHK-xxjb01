@@ -238,19 +238,20 @@ class TestR4Checkout:
 
     def test_4r1q(self):
         assert checkout_solution.checkout('RRRRQ') == 200
-    #
-    # def test_8r2q(self):
-    #     assert checkout_solution.checkout('RRRRRRRRQQ') == 400
-    #
-    # def test_3r1q(self):
-    #     assert checkout_solution.checkout('RRRQ') == 150
-    #
-    # def test_2r2q(self):
-    #     assert checkout_solution.checkout('RRQQ') == 160
-    #
-    # def test_4r2q(self):
-    #     assert checkout_solution.checkout('RRRRQQ') == 230
-    #
-    # def test_7r5q(self):
-    #     assert checkout_solution.checkout('RRRRRRRQQQQQ') == 440
+
+    def test_8r2q(self):
+        assert checkout_solution.checkout('RRRRRRRRQQ') == 400
+
+    def test_3r1q(self):
+        assert checkout_solution.checkout('RRRQ') == 150
+
+    def test_2r2q(self):
+        assert checkout_solution.checkout('RRQQ') == 160
+
+    def test_4r2q(self):
+        assert checkout_solution.checkout('RRRRQQ') == 230
+
+    def test_7r5q(self):
+        assert checkout_solution.checkout('RRRRRRRQQQQQ') == 440
+
 

@@ -128,7 +128,7 @@ def checkout(skus:str) -> int:
 
     def clear_r():
         value = count['R']
-        if value > 1:
+        if value > 2:
             counter = value
             if count['Q'] > 0:
                 while counter >= 0:
@@ -165,4 +165,5 @@ def checkout(skus:str) -> int:
     print(f'COUNT: {count}')
 
     return result
+
 
