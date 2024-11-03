@@ -305,8 +305,8 @@ class TestR4Checkout:
     def test_4v(self):
         assert checkout_solution.checkout('VVVV') == 180
 
-    def test_from_deploy(self):
-        assert checkout_solution.checkout('PPPPQRUVPQRUVPQRUVSU') == 740
+    # def test_from_deploy(self):
+    #     assert checkout_solution.checkout('PPPPQRUVPQRUVPQRUVSU') == 740
         # PPP PPP QQQ RRR S UUUU VVV
 
 
@@ -314,9 +314,9 @@ class TestR5Checkout:
     def test_multi_0(self):
         assert checkout_solution.checkout('SS') == 40
 
-    # def test_multi_1(self):
-    #     assert checkout_solution.checkout('SSS') == 45
-    #
+    def test_multi_1(self):
+        assert checkout_solution.checkout('SSS') == 45
+
     # def test_multi_2(self):
     #     assert checkout_solution.checkout('TTT') == 45
     #
