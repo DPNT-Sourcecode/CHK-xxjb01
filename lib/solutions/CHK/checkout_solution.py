@@ -142,7 +142,11 @@ def checkout(skus:str) -> int:
 
 
     def multi_discount():
-        pass
+        all_items_in_discount = ['S','T','X','Y','Z']
+        total_items = sum([count[dis_item] for dis_item in all_items_in_discount])
+        count['3Q'] = int(value / 3)
+        count['Q'] = value % 3
+
 
     for item in skus:
         if item in price_table:
@@ -175,4 +179,3 @@ def checkout(skus:str) -> int:
     print(f'COUNT: {count}')
 
     return result
-
