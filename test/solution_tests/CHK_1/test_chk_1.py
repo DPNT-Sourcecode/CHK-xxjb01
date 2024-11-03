@@ -308,3 +308,46 @@ class TestR4Checkout:
     def test_from_deploy(self):
         assert checkout_solution.checkout('PPPPQRUVPQRUVPQRUVSU') == 740
         # PPP PPP QQQ RRR S UUUU VVV
+
+
+class TestR5Checkout:
+    def test_multi_0(self):
+        assert checkout_solution.checkout('SS') == 40
+
+    # def test_multi_1(self):
+    #     assert checkout_solution.checkout('SSS') == 45
+    #
+    # def test_multi_2(self):
+    #     assert checkout_solution.checkout('TTT') == 45
+    #
+    # def test_multi_3(self):
+    #     assert checkout_solution.checkout('STS') == 45
+    #
+    # def test_multi_4(self):
+    #     assert checkout_solution.checkout('XYZ') == 45
+    #
+    # def test_multi_5(self):
+    #     assert checkout_solution.checkout('SSTX') == 45
+    #
+    # def test_multi_6(self):
+    #     assert checkout_solution.checkout('STXYST') == 90 # 6 items
+    #
+    # def test_multi_7(self):
+    #     assert checkout_solution.checkout('SSSTTTYYYZZZZ') == 201 # 4 promos, one extra Z
+
+
+
+
+
+
+    # def test_multi_8(self):
+    #     assert checkout_solution.checkout('SSS') == 45
+    #
+    # def test_multi_9(self):
+    #     assert checkout_solution.checkout('SSS') == 45
+    #
+    # def test_multi_10(self):
+    #     assert checkout_solution.checkout('SSS') == 45
+    #
+    # def test_multi_11(self):
+    #     assert checkout_solution.checkout('SSS') == 45

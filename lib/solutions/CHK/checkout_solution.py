@@ -4,8 +4,8 @@ from tabnanny import check
 
 price_table = {'A': 50, '3A': 130, '5A': 200, 'B': 30, '2B': 45, 'C': 20, 'D': 15, 'E': 40, 'F': 10, 'G': 20,
                'H': 10, '5H': 45, '10H': 80, 'I': 35, 'J': 60, 'K': 80, '2K':150, 'L': 90, 'M': 15,
-               'N': 40, 'O': 10, 'P': 50, '5P':200, 'Q': 30, '3Q':80, 'R': 50, 'S': 30, 'T': 20,'U': 40,
-               'V': 50, '2V':90, '3V':130, 'W': 20, 'X': 90, 'Y': 10, 'Z': 50}
+               'N': 40, 'O': 10, 'P': 50, '5P':200, 'Q': 30, '3Q':80, 'R': 50, 'S': 20, 'T': 20,'U': 40,
+               'V': 50, '2V':90, '3V':130, 'W': 20, 'X': 17, 'Y': 20, 'Z': 21}
 
 def checkout(skus:str) -> int:
 
@@ -140,6 +140,10 @@ def checkout(skus:str) -> int:
             count['2V'] = int(value / 2)
             count['V'] = value % 2
 
+
+    def multi_discount():
+        pass
+
     for item in skus:
         if item in price_table:
             if item in count.keys():
@@ -163,6 +167,7 @@ def checkout(skus:str) -> int:
         clear_q()
         clear_u()
         clear_v()
+        multi_discount()
 
         result = sum([price_table[item] * count[item] for item in count]) + discount
 
@@ -170,6 +175,4 @@ def checkout(skus:str) -> int:
     print(f'COUNT: {count}')
 
     return result
-
-checkout('RRRRRRRQQQQQQ')
 
