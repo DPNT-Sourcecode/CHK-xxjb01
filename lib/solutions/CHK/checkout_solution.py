@@ -143,7 +143,14 @@ def checkout(skus:str) -> int:
 
     def multi_discount():
         all_items_in_discount = ['S','T','X','Y','Z']
-        discounting_from = {dis_item:dis_item for dis_item in all_items_in_discount if count[dis_item] > 0 }
+        discounting_from = {}
+        for dis_item in count:
+            if dis_item > 0:
+                if dis_item in count.keys():
+                    count[dis_item] += 1
+                else:
+                    count[dis_item] = 1
+
         total_items = sum([count[dis_item] for dis_item in all_items_in_discount])
         print(discounting_from)
         if total_items > 2:
@@ -201,6 +208,7 @@ def checkout(skus:str) -> int:
     print(f'COUNT: {count}')
 
     return result
+
 
 
 
