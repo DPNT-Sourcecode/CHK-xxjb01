@@ -187,7 +187,3 @@ class TestR4Checkout:
     #
     # def test_7n5m(self):
     #     assert checkout_solution.checkout('NNNNNNNMMMMM') == 325
-
-
-
-

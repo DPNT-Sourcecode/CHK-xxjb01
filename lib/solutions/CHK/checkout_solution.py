@@ -140,7 +140,3 @@ def checkout(skus:str) -> int:
     print(f'COUNT: {count}')
 
     return result
-
-
-
-
