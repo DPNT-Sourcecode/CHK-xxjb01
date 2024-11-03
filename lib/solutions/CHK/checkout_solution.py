@@ -133,10 +133,11 @@ def checkout(skus:str) -> int:
         if value >= 3:
             while counter >= 3:
                 counter -= 3
-                discount -= 30
+                # discount -= 30
+                count['Q'] -= 1
                 total_q = count['Q']
-                if total_q == 0:
-                    count['Q'] += 1
+                # if total_q == 0:
+                #     count['Q'] += 1
 
     def clear_u():
         nonlocal discount
@@ -196,4 +197,3 @@ def checkout(skus:str) -> int:
     return result
 
 checkout('RRRRRRRQQQQQQ')
-
