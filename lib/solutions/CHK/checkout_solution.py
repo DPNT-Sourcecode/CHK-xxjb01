@@ -170,4 +170,3 @@ def checkout(skus:str) -> int:
     return result
 
 checkout('RRRRRRRQQQQQQ')
-
