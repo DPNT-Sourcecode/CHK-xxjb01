@@ -82,7 +82,15 @@ def checkout(skus:str) -> int:
                 discount -= 10
 
     def clear_h():
-        pass
+        value = count['H']
+        if value > 1:
+            counter = value
+            if count['H'] > 0:
+                while counter >= 0:
+                    count['H'] -= 1
+                    counter -= 2
+                    if counter <= 1 or count['H'] == 0:
+                        break
 
     def clear_k():
         value = count['K']
@@ -113,3 +121,4 @@ def checkout(skus:str) -> int:
     print(f'COUNT: {count}')
 
     return result
+
