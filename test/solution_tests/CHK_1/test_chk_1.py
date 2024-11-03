@@ -155,12 +155,13 @@ class TestR4Checkout:
         assert checkout_solution.checkout('KKKKK') == 380
 
     def test_10k(self):
-        assert checkout_solution.checkout('KKKKKKKKKK') == 1250
+        assert checkout_solution.checkout('KKKKKKKKKK') == 750
 
     def test_11k(self):
-        assert checkout_solution.checkout('KKKKKKKKKKK') == 1260
+        assert checkout_solution.checkout('KKKKKKKKKKK') == 830
 
     # N
+
 
 
 
