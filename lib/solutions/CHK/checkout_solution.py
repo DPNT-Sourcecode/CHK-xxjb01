@@ -137,6 +137,8 @@ def checkout(skus:str) -> int:
                 total_q = count['Q']
                 if total_q == 0:
                     count['Q'] += 1
+                elif total_q % 3 == 0:
+                    count['Q'] -= 1
 
     for item in skus:
         if item in price_table:
