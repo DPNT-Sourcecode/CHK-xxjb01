@@ -130,12 +130,10 @@ def checkout(skus:str) -> int:
         nonlocal discount
         value = count['R']
         counter = value
-        target_q = count['Q']
         if value >= 3:
             while counter >= 3:
                 counter -= 3
                 discount -= 30
-
                 total_q = count['Q']
                 if total_q == 0:
                     count['Q'] += 1
