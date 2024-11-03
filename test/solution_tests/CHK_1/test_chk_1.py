@@ -305,5 +305,8 @@ class TestR4Checkout:
     def test_4v(self):
         assert checkout_solution.checkout('VVVV') == 180
 
+    def test_from_deploy(self):
+        assert checkout_solution.checkout('PPPPQRUVPQRUVPQRUVSU') == 740
+
 
 
