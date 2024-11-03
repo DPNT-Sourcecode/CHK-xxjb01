@@ -66,9 +66,17 @@ def checkout(skus:str) -> int:
     def clear_f():
         nonlocal discount
         value = count['F']
-        if value >= 2:
+        if value == 2:
             count['F'] += 1
-            discount =- 10
+            discount -= 10
+        if value > 2:
+            counter = count['F']
+            print(counter)
+            while counter >= 3:
+                counter -= 3
+                discount -= 10
+
+
 
     for item in skus:
         if item in price_table:
@@ -88,10 +96,11 @@ def checkout(skus:str) -> int:
 
         result = sum([price_table[item] * count[item] for item in count]) + discount
 
-    # print(result)
-    # print(count)
+    print(f'RESULT: {result}')
+    print(f'COUNT: {count}')
 
     return result
+
 
 
 
