@@ -111,6 +111,3 @@ class TestR3Checkout:
 class TestR4Checkout:
     def test_empty(self):
         assert checkout_solution.checkout('') == 0
-
-
-
