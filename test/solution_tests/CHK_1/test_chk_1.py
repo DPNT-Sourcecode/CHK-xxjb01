@@ -207,3 +207,23 @@ class TestR4Checkout:
     def test_11p(self):
         assert checkout_solution.checkout('PPPPPPPPPPP') == 450
 
+    # Q
+    def test_3q(self):
+        assert checkout_solution.checkout('QQQ') == 80
+
+    def test_5q(self):
+        assert checkout_solution.checkout('QQQQQ') == 140
+
+    def test_7q(self):
+        assert checkout_solution.checkout('QQQQQQQ') == 190
+
+    def test_9q(self):
+        assert checkout_solution.checkout('QQQQQQQQQ') == 240
+
+    def test_10q(self):
+        assert checkout_solution.checkout('QQQQQQQQQQ') == 270
+
+    def test_11q(self):
+        assert checkout_solution.checkout('QQQQQQQQQQQ') == 300
+
+

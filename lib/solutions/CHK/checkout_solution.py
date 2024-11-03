@@ -121,6 +121,11 @@ def checkout(skus:str) -> int:
         count['5P'] = int(value / 5)
         count['P'] = value % 5
 
+    def clear_q():
+        value = count['Q']
+        count['3Q'] = int(value / 3)
+        count['Q'] = value % 3
+
     for item in skus:
         if item in price_table:
             if item in count.keys():
@@ -140,6 +145,7 @@ def checkout(skus:str) -> int:
         clear_k()
         clear_n()
         clear_p()
+        clear_q()
 
         result = sum([price_table[item] * count[item] for item in count]) + discount
 
@@ -147,6 +153,7 @@ def checkout(skus:str) -> int:
     print(f'COUNT: {count}')
 
     return result
+
 
 
 
