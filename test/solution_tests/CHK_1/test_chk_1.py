@@ -336,6 +336,13 @@ class TestR5Checkout:
         assert checkout_solution.checkout('SSSTTTYYYZZZZ') == 201 # 4 promos, one extra Z
 
 
+    def test_from_deploy1(self):
+        assert checkout_solution.checkout('K') == 70
+
+    def test_from_deploy2(self):
+        assert checkout_solution.checkout('ABCDEFGHIJKLMNOPQRSTUVW') == 795
+
+
 
 
 
@@ -351,4 +358,5 @@ class TestR5Checkout:
     #
     # def test_multi_11(self):
     #     assert checkout_solution.checkout('SSS') == 45
+
 

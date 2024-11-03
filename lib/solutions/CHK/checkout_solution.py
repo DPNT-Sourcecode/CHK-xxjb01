@@ -3,7 +3,7 @@
 from tabnanny import check
 
 price_table = {'A': 50, '3A': 130, '5A': 200, 'B': 30, '2B': 45, 'C': 20, 'D': 15, 'E': 40, 'F': 10, 'G': 20,
-               'H': 10, '5H': 45, '10H': 80, 'I': 35, 'J': 60, 'K': 80, '2K':150, 'L': 90, 'M': 15,
+               'H': 10, '5H': 45, '10H': 80, 'I': 35, 'J': 60, 'K': 70, '2K':150, 'L': 90, 'M': 15,
                'N': 40, 'O': 10, 'P': 50, '5P':200, 'Q': 30, '3Q':80, 'R': 50, 'S': 20, 'T': 20,'U': 40,
                'V': 50, '2V':90, '3V':130, 'W': 20, 'X': 17, 'Y': 20, 'Z': 21}
 
@@ -43,9 +43,10 @@ def checkout(skus:str) -> int:
                         break
 
     def clear_b():
-        value = count['B']
-        count['2B'] = int(value / 2)
-        count['B'] = value % 2
+        if count['B'] > 1:
+            value = count['B']
+            count['2B'] = int(value / 2)
+            count['B'] = value % 2
 
     def clear_f():
         nonlocal discount
@@ -78,9 +79,10 @@ def checkout(skus:str) -> int:
                     if counter <= 1 or count['H'] < 5:
                         break
     def clear_k():
-        value = count['K']
-        count['2K'] = int(value / 2)
-        count['K'] = value % 2
+        if count['K'] > 0:
+            value = count['K']
+            count['2K'] = int(value / 2)
+            count['K'] = value % 2
 
     def clear_n():
         nonlocal discount
@@ -95,14 +97,16 @@ def checkout(skus:str) -> int:
                     count['M'] += 1
 
     def clear_p():
-        value = count['P']
-        count['5P'] = int(value / 5)
-        count['P'] = value % 5
+        if count['P'] > 4:
+            value = count['P']
+            count['5P'] = int(value / 5)
+            count['P'] = value % 5
 
     def clear_q():
-        value = count['Q']
-        count['3Q'] = int(value / 3)
-        count['Q'] = value % 3
+        if count['Q'] > 2:
+            value = count['Q']
+            count['3Q'] = int(value / 3)
+            count['Q'] = value % 3
 
     def clear_r():
         nonlocal discount
@@ -216,6 +220,7 @@ def checkout(skus:str) -> int:
     print(f'COUNT: {count}')
 
     return result
+
 
 
 
